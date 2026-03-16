@@ -5,9 +5,14 @@ export default function Day() {
         <div>
             <table>
                 <tbody>
-                    {words.map(word => (
+                    {dummy.words.map(word => (
                         <tr>
-                            <td></td>
+                            <td>
+                                {word.eng}
+                            </td>
+                            <td>
+                                {word.kor}
+                            </td>
                         </tr>
                     ))}
 

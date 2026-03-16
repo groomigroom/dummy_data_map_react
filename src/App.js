@@ -6,11 +6,21 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <Header_part />
-      <DayList />
-      <Day />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header_part />
+        <Switch>
+          <Route path="/">
+            <DayList />
+          </Route>
+          <Route path="/day">
+            <Day />
+          </Route>
+
+
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 

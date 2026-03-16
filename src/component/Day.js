@@ -2,14 +2,14 @@ import dummy from "../db/data.json";
 
 export default function Day() {
     const day = 1;
-    const wordList = dummy.words.filter(word => word.day === day);
+    const wordList = dummy.words.filter(word => (word.day === day));
     console.log(wordList);
 
     return (
         <>
             <table>
                 <tbody>
-                    {dummy.words.map(word => (
+                    {wordList.map(word => (
                         <tr key={word.id}>
                             <td>
                                 {word.eng}

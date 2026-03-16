@@ -19,6 +19,19 @@
             "kor" : "자동차",
             "isDone" : false
         },
-        
+        {
+            "id" : 3,
+            "day" : 2,
+            "eng" : "mincho",
+            "kor" : "민트초코",
+            "isDone" : false
+        },
+        {
+            "id" : 4,
+            "day" : 2,
+            "eng" : "chocolate",
+            "kor" : "초콜릿",
+            "isDone" : false
+        },
     ]
 }

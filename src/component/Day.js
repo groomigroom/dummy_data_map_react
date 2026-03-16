@@ -10,7 +10,7 @@ export default function Day() {
             <table>
                 <tbody>
                     {dummy.words.map(word => (
-                        <tr>
+                        <tr key={word.id}>
                             <td>
                                 {word.eng}
                             </td>

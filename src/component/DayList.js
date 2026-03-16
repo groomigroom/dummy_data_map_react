@@ -5,9 +5,12 @@ export default function DayList() {
     return (
         <div>
             <ul className='list_day'>
-                {dummy.days.map()}
-                <li></li>
-            </ul>
+                {dummy.days.map(day => (
+                    <li>
+                        Day {day.day}
+                    </li>
+                ))} 
+            </ul>;
         </div>
     );
 }

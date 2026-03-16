@@ -6,7 +6,7 @@ export default function Day() {
     console.log(wordList);
 
     return (
-        <div>
+        <>
             <table>
                 <tbody>
                     {dummy.words.map(word => (
@@ -22,8 +22,6 @@ export default function Day() {
 
                 </tbody>
             </table>
-        </div>
-
+        </>
     );
-
 }

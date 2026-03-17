@@ -2,6 +2,86 @@ router를 설치할 때는 npm install react-router-dom으로 하기
 https://www.youtube.com/watch?v=vI-XtN_Zdfg&list=PLZKTXPmaJk8J_fHAzPLH8CJ_HO_M33e7-&index=10
 1분 57초부터 보기
 
+import './App.css';
+import Header_part from "./component/Header_part";
+import DayList from './component/DayList';
+import Day from './component/Day';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+function App() {
+  return (
+    <BrowserRouter>
+      <div className="App">
+        <Header_part />
+        <Routes>
+          <Route #####exact path="/" element={<DayList />} />
+          <Route path="/day#####/:day" element={<Day />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+
+//v6 방식 찾아보기 route
+
+DayList.js에
+Day {day.day}를
+<Link to={`/day${day.day}`}></Link>로 감싸기
+그리고 가장 위에 import {Link} from "react-router-dom"; 써주기
+
+Header_part.js에 
+<a href="/">토익 영단어(고급)</a>를 a 태그 없애고,
+<Link to="/">로 감싸는거로 바꿔주기
+그리고 가장 위에 import {Link} from "react-router-dom"; 써주기
+
+
+Day.js에
+가장 상단에 import {useParams} from "react-router-dom"; 써주기
+
+const wordList = dummy.words.filter(word => (word.day === day)); 바로 아래에다가
+
+const a = useParams();
+console.log(a);
+
+const day = 3 없애고,
+그자리에
+/*const a = useParams(); 넣고,
+그 아래에, const day = a.day; 넣기.*/
+
+const {day} = useParams(); 넣기
+
+그러고 나서 console.log(a); 없애기.
+
+const wordList = dummy.words.filter(word => (word.day === day));를
+const wordList = dummy.words.filter(word => word.day === Number(day));
+
+////////
+
+component 폴더에
+EmptyPage.js
+
+import {Link} from "react-router-dom";
+
+export default function EmptyPage(){
+	return (
+		<>
+			<h2>잘못된 접근입니다.</h2>
+			<Link to="/">돌아가기</Link>
+		</>
+	);
+}
+
+App.js에
+
+<Switch> 바로 위에
+<Route>
+	<EmptyPage />
+</Route>
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

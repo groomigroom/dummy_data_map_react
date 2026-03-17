@@ -1,6 +1,8 @@
 router를 설치할 때는 npm install react-router-dom으로 하기
 https://www.youtube.com/watch?v=vI-XtN_Zdfg&list=PLZKTXPmaJk8J_fHAzPLH8CJ_HO_M33e7-&index=10
-1분 57초부터 보기
+
+
+https://www.youtube.com/watch?v=CHHXeHVK-8U
 
 import './App.css';
 import Header_part from "./component/Header_part";
